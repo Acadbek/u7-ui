@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion } from "motion/react";
 import type { DialogProps } from "../../types/dialog.types";
+import { Button } from "../button";
 
 export const Dialog: React.FC<DialogProps> = ({
   isOpen,
@@ -74,8 +75,7 @@ export const Dialog: React.FC<DialogProps> = ({
     >
       <motion.div
         ref={dialogRef}
-        // Dialog
-        className="relative w-full max-w-md rounded-lg bg-white dark:bg-gray-800 shadow-xl p-6"
+        className="relative w-full max-w-md bg-white dark:bg-gray-800 shadow-xl p-4"
         initial={{ y: -30, scale: 0.95, opacity: 0 }}
         animate={{ y: 0, scale: 1, opacity: 1 }}
         exit={{ y: -30, scale: 0.95, opacity: 0 }}
@@ -85,13 +85,13 @@ export const Dialog: React.FC<DialogProps> = ({
           <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
             {title || "Dialog"}
           </h2>
-          <button
+          <Button
+            variant="ghost"
             onClick={onClose}
-            className="p-1 rounded-full text-gray-500 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-gray-400 transition-colors"
             aria-label="Yopish"
           >
             <div className="i-tabler:x" />
-          </button>
+          </Button>
         </div>
 
         <div className="text-gray-700 dark:text-gray-300">{children}</div>

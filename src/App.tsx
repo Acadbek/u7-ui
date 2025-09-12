@@ -25,9 +25,7 @@ function App() {
           <Button onClick={() => toast.info('Hello')}>Info</Button>
         </div>
       </Container>
-      <Container componentName='Dialog'>
-        <DialogDemo />
-      </Container>
+   
     </div>
   )
 }

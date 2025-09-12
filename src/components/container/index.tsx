@@ -10,7 +10,7 @@ const Container = ({ children, componentName }: ContainerProps) => {
   const [preview, setPreview] = React.useState<'preview' | 'code'>('preview')
 
   return (
-    <div className='w-[700px] bg-[#F8F8F8]'>
+    <div className='w-full bg-[#F8F8F8]'>
       <div flex='~ items-center justify-between' gap='1px' border='b [#dbd7d7]' p='1'>
         <div flex gap='1px'>
           <Button onClick={() => setPreview('preview')} variant='outline' size='sm'>Preview</Button>

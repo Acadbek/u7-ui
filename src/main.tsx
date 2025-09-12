@@ -4,11 +4,15 @@ import './index.css'
 import App from './App.tsx'
 import 'virtual:uno.css'
 import ToastProvider from './components/toast/provider.tsx'
+import { BrowserRouter } from 'react-router-dom'
+import Routers from './router/index.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <ToastProvider>
-      <App />
-    </ToastProvider>
+    <BrowserRouter>
+      <ToastProvider>
+        <Routers />
+      </ToastProvider>
+    </BrowserRouter>
   </StrictMode>,
 )
