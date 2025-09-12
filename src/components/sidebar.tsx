@@ -2,7 +2,11 @@ import React from 'react'
 import { routes } from '../config/routes'
 import { Link } from 'react-router-dom'
 
-const Sidebar = ({ className }) => {
+interface SidebarProps {
+  className: string
+}
+
+const Sidebar = ({ className }: SidebarProps) => {
   return (
     <div className={`flex flex-col h-screen ${className}`}>
       <aside className='w-full fixed left-0 top-0 p-4'>

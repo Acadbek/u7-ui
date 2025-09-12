@@ -8,7 +8,7 @@ import DialogDesign from '../pages/design/dialog-page'
 
 const Routers = () => {
   return (
-    <main grid='~ cols-7 gap-4'>
+    <main un-grid='~ cols-7 gap-4'>
       <Sidebar className='col-span-2' />
       <div className='col-span-3'>
         <Routes>
