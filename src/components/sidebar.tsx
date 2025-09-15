@@ -8,8 +8,8 @@ interface SidebarProps {
 const Sidebar = ({ className }: SidebarProps) => {
   return (
     <div className={`flex flex-col h-screen ${className}`}>
-      <aside className='w-full fixed left-0 top-0 p-4'>
-        <Link to='/'>
+      <aside className='fixed left-0 top-0 p-4'>
+        <Link to='/' className=''>
           <div className="i-tabler:topology-complex w-[45px] h-[45px]" />
         </Link>
         <div className='mt-3'>

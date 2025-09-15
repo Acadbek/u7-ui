@@ -25,4 +25,9 @@ export const routes: RoutesProps[] = [
     title: "Dialog",
     link: `${docsLink}/${componentLink}/dialog`,
   },
+  {
+    id: uuidv4(),
+    title: "Tabs",
+    link: `${docsLink}/${componentLink}/tabs`,
+  },
 ];

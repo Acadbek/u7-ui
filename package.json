@@ -18,13 +18,17 @@
     "motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-refractor": "^4.0.0",
     "react-router-dom": "^7.8.2",
+    "react-syntax-highlighter": "^15.6.6",
+    "refractor": "^5.0.0",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
+    "@types/react-syntax-highlighter": "^15.5.13",
     "@unocss/transformer-attributify-jsx": "^66.5.1",
     "@vitejs/plugin-react-swc": "^4.0.0",
     "eslint": "^9.33.0",
