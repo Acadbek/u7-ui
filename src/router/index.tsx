@@ -5,6 +5,7 @@ import ButtonDesign from '../pages/design/button/button-page'
 import ToastDesign from '../pages/design/toast-page'
 import DialogDesign from '../pages/design/dialog-page'
 import TabsDesign from '../pages/design/tabs-page'
+import DropDownDesign from '../pages/design/dropdown-page'
 
 const Routers = () => {
   return (
@@ -16,6 +17,7 @@ const Routers = () => {
           <Route path={`${docsLink}/${componentLink}/toast`} element={<ToastDesign />} />
           <Route path={`${docsLink}/${componentLink}/dialog`} element={<DialogDesign />} />
           <Route path={`${docsLink}/${componentLink}/tabs`} element={<TabsDesign />} />
+          <Route path={`${docsLink}/${componentLink}/dropdown`} element={<DropDownDesign />} />
           <Route path='*' element={<h1>404</h1>} />
         </Routes>
       </div>

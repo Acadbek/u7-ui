@@ -15,7 +15,7 @@ const Sidebar = ({ className }: SidebarProps) => {
         <div className='mt-3'>
           <div className={`flex flex-col gap-3 `}>
             {routes.map((route) => (
-              <Link className='hover:underline' to={route.link}>
+              <Link key={route.id} className='hover:underline' to={route.link}>
                 {route.title}
               </Link>
             ))}

@@ -11,10 +11,12 @@
   },
   "dependencies": {
     "@iconify-json/tabler": "^1.2.22",
+    "@iconify/react": "^6.0.2",
     "@unocss/preset-web-fonts": "^66.5.0",
     "axios": "^1.11.0",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
+    "clsx": "^2.1.1",
     "motion": "^12.23.12",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
