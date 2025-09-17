@@ -3,7 +3,7 @@ import Sidebar from '../components/sidebar'
 import { componentLink, docsLink } from '../config/routes'
 import ButtonDesign from '../pages/design/button/button-page'
 import ToastDesign from '../pages/design/toast-page'
-import DialogDesign from '../pages/design/dialog-page'
+import DialogDesign from '../pages/design/dialog/dialog-page'
 import TabsDesign from '../pages/design/tabs-page'
 import DropDownDesign from '../pages/design/dropdown-page'
 
