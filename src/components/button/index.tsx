@@ -50,3 +50,5 @@ export const Button = ({
     </motion.button>
   )
 }
+
+export default Button;

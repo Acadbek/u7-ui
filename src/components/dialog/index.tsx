@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { motion } from "motion/react";
-import type { DialogProps } from "../../types/dialog.types";
+import { DialogProps } from "../../types/dialog.types";
 import { Button } from "../button";
 
 export const Dialog: React.FC<DialogProps> = ({
@@ -102,3 +102,5 @@ export const Dialog: React.FC<DialogProps> = ({
     </motion.div>
   );
 };
+
+export default Dialog;

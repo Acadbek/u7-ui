@@ -1,5 +1,5 @@
 import React from "react";
-import type { TabsProps } from "../../types/tabs.types";
+import { TabsProps } from "../../types/tabs.types";
 import { AnimatePresence, motion } from "motion/react";
 
 export const Tabs: React.FC<TabsProps> = ({ items, defaultIndex = 0 }) => {
