@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import Sidebar from '../components/sidebar'
 import { componentLink, docsLink } from '../config/routes'
 import ButtonDesign from '../pages/design/button/button-page'
-import ToastDesign from '../pages/design/toast-page'
+import ToastDesign from '../pages/design/toast/toast-page'
 import DialogDesign from '../pages/design/dialog-page'
 import TabsDesign from '../pages/design/tabs-page'
 

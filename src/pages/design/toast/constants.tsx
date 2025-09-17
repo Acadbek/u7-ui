@@ -2,51 +2,47 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { Button } from "../../../components/button";
 import { docco } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
+
 // Syntax
 
-export const codePrimaryButton = `import { Button } from "@/components/ui/button"
+export const codeSuccessToastData = `import { Button } from "@/components/ui/button"
 
-export function ButtonDemo() {
-  return <Button variant='primary'>Primary</Button>
+export function ToastSuccess() {
+  return <Button variant="success" onClick={() => toast.success('Success')}>Success</Button>
 }`;
 
 
-export const codeSecondaryButton = `import { Button } from "@/components/ui/button"
+export const codeErrorToastData= `import { Button } from "@/components/ui/button"
 
-export function ButtonDemo() {
-  return <Button variant='secondary'>Secondary</Button>
+export function ToastError() {
+  return <Button variant="error" onClick={() => toast.error('Error')}>Error</Button>
 }`;
 
 
-export const codeOutlineButton = `import { Button } from "@/components/ui/button"
+export const codeWarningToastData = `import { Button } from "@/components/ui/button"
 
-export function ButtonDemo() {
-  return <Button variant='outline'>Outline</Button>
+export function ToastWarning() {
+  return <Button variant="warning" onClick={() => toast.warning('Warning')}>Warning</Button>
 }`;
 
-export const codeGhostButton = `import { Button } from "@/components/ui/button"
+export const codeInfoToastData = `import { Button } from "@/components/ui/button"
 
-export function ButtonDemo() {
-  return <Button variant='ghost'>Ghost</Button>
+export function ToastInfo() {
+  return <Button variant="info" onClick={() => toast.info('Info')}>Info</Button>
 }`;
 
-export const codeRedButton = `import { Button } from "@/components/ui/button"
-
-export function ButtonDemo() {
-  return <Button variant='red'>Red</Button>
-}`;
 
 
 // data
 
 
 
-export const primaryButtonData = [
+export const successToastData = (toast: any) =>[
   {
     label: "Preview",
     content: (
       <div className="flex justify-center items-center border border-gray items-center gap-4 h-[400px]">
-        <Button>Click</Button>
+         <Button variant="success" onClick={() => toast.success('Success')}>Success</Button>
       </div>
     ),
   },
@@ -60,19 +56,19 @@ export const primaryButtonData = [
           padding: '40px',
           fontSize: '14px'
         }} language="javascript" style={docco}>
-          {codePrimaryButton}
+          {codeSuccessToastData}
         </SyntaxHighlighter>
       </div >
     ),
   },
 ];
 
-export const secondayButtonData = [
+export const errorToastData = (toast: any) => [
   {
     label: "Preview",
     content: (
       <div className="flex justify-center items-center border border-gray items-center gap-4 h-[400px]">
-        <Button variant='secondary'>Secondary</Button>
+       <Button variant="error" onClick={() => toast.error('Error')}>Error</Button>
       </div>
     ),
   },
@@ -86,19 +82,19 @@ export const secondayButtonData = [
           padding: '40px',
           fontSize: '14px'
         }} language="javascript" style={docco}>
-          {codeSecondaryButton}
+          {codeErrorToastData}
         </SyntaxHighlighter>
       </div >
     ),
   },
 ];
 
-export const outlineButtonData = [
+export const warningToastData = (toast: any) => [
   {
     label: "Preview",
     content: (
       <div className="flex justify-center items-center border border-gray items-center gap-4 h-[400px]">
-        <Button variant='outline'>Outline</Button>
+         <Button variant="warning" onClick={() => toast.warning('Warning')}>Warning</Button>
       </div>
     ),
   },
@@ -112,19 +108,19 @@ export const outlineButtonData = [
           padding: '40px',
           fontSize: '14px'
         }} language="javascript" style={docco}>
-          {codeOutlineButton}
+          {codeWarningToastData}
         </SyntaxHighlighter>
       </div >
     ),
   },
 ];
 
-export const ghostButtonData = [
+export const infoToastData = (toast: any) => [
   {
     label: "Preview",
     content: (
       <div className="flex justify-center items-center border border-gray items-center gap-4 h-[400px]">
-        <Button variant='ghost'>Ghost</Button>
+        <Button variant="info" onClick={() => toast.info('Info')}>Info</Button>
       </div>
     ),
   },
@@ -138,33 +134,7 @@ export const ghostButtonData = [
           padding: '40px',
           fontSize: '14px'
         }} language="javascript" style={docco}>
-          {codeGhostButton}
-        </SyntaxHighlighter>
-      </div >
-    ),
-  },
-];
-
-export const redButtonData = [
-  {
-    label: "Preview",
-    content: (
-      <div className="flex justify-center items-center border border-gray items-center gap-4 h-[400px]">
-        <Button variant='error'>Red</Button>
-      </div>
-    ),
-  },
-  {
-    label: "Code",
-    content: (
-      <div>
-        <SyntaxHighlighter customStyle={{
-          height: '400px',
-          backgroundColor: '#F8F8F8',
-          padding: '40px',
-          fontSize: '14px'
-        }} language="javascript" style={docco}>
-          {codeRedButton}
+          {codeInfoToastData}
         </SyntaxHighlighter>
       </div >
     ),
