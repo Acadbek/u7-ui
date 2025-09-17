@@ -9,9 +9,11 @@ Easily integrate buttons, dialogs, tabs, dropdown menus, and more into your proj
 
 ```bash
 npm install u7-ui
+```
 
 ```bash
 import "u7-ui/dist/style.css";
+```
 
 ```jsx
 import { Button, Dialog, Tabs, ToastProvider, DropDownMenu } from "u7-ui";
