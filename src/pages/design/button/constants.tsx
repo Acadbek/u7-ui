@@ -36,6 +36,12 @@ export function ButtonDemo() {
   return <Button variant='red'>Red</Button>
 }`;
 
+export const codeLiquidButton = `import { Button } from "@/components/ui/button"
+
+export function ButtonDemo() {
+  return <Button variant='liquid'>Liquid Glass</Button>
+}`;
+
 
 // data
 
@@ -170,3 +176,35 @@ export const redButtonData = [
     ),
   },
 ];
+
+export const liquidButtonData = [
+  {
+    label: "Preview",
+    content: (
+      <div className="overflow-y-auto overflow-x-hidden relative border border-gray items-center gap-4 h-[400px]">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde nesciunt sapiente necessitatibus modi explicabo eius recusandae ipsum laborum et laboriosam, nulla ipsa quo, ad consequuntur nemo, libero ab animi eos eligendi suscipit incidunt tenetur dicta molestiae! Fugit earum necessitatibus esse, harum excepturi id doloremque expedita fugiat voluptates doloribus eius, voluptatem distinctio aspernatur? Labore dicta perspiciatis alias quasi deserunt. Facilis veniam iste qui eaque omnis delectus temporibus itaque sapiente consequatur non.</p>
+        <img src='https://images.ctfassets.net/hrltx12pl8hq/28ECAQiPJZ78hxatLTa7Ts/2f695d869736ae3b0de3e56ceaca3958/free-nature-images.jpg?fit=fill&w=1200&h=630' />
+        <Button style={{
+          position: 'absolute',
+          left: '-9%',
+          top: '50%'
+        }} variant='liquid'>Liquid Glass</Button>
+      </div>
+    ),
+  },
+  {
+    label: "Code",
+    content: (
+      <div>
+        <SyntaxHighlighter customStyle={{
+          height: '400px',
+          backgroundColor: '#F8F8F8',
+          padding: '40px',
+          fontSize: '14px'
+        }} language="javascript" style={docco}>
+          {codeLiquidButton}
+        </SyntaxHighlighter>
+      </div >
+    ),
+  },
+]

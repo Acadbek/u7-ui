@@ -2,6 +2,7 @@ import { cva } from "class-variance-authority";
 import cn from "classnames";
 import { motion } from "motion/react";
 import type { ButtonProps } from "../../types/button";
+import LiquidGlass from "liquid-glass-react";
 
 const buttonVariants = cva(
   "inline-flex flex gap-2 items-center justify-center font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
@@ -18,6 +19,7 @@ const buttonVariants = cva(
         success: 'bg-green-600 text-white hover:bg-green-700 dark:bg-green-500',
         warning: 'bg-yellow-500 text-white hover:bg-yellow-600 dark:bg-yellow-400',
         info: 'bg-cyan-600 text-white hover:bg-cyan-700 dark:bg-cyan-500',
+        liquid: ''
       },
       size: {
         sm: "h-8 px-3 text-sm",
@@ -41,13 +43,33 @@ export const Button = ({
   ...props
 }: ButtonProps) => {
   return (
-    <motion.button
-      whileTap={{ scale: 0.97 }}
-      className={cn(buttonVariants({ variant, size }), className)}
-      {...props}
-    >
-      {children} {icon && <i className={icon}></i>}
-    </motion.button>
+    <>
+      <motion.button
+        whileTap={{ scale: 0.97 }}
+        className={cn(buttonVariants({ variant, size }), className)}
+        {...props}
+      >
+        {variant === 'liquid' ?
+          <LiquidGlass
+            className="flex items-center justify-center"
+            displacementScale={40}
+            blurAmount={0}
+            saturation={130}
+            aberrationIntensity={2}
+            elasticity={5}
+            cornerRadius={0}
+          >
+            <div>
+              {children} {icon && <i className={icon}></i>}
+            </div>
+          </LiquidGlass>
+          :
+          <>
+            {children} {icon && <i className={icon}></i>}
+          </>
+        }
+      </motion.button>
+    </>
   )
 }
 

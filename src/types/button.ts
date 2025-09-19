@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes } from "react";
 import type { HTMLMotionProps } from "motion/react";
+import React from "react";
 
 export interface ButtonProps extends Omit<HTMLMotionProps<"button">, "ref"> {
   variant?:
@@ -10,7 +11,9 @@ export interface ButtonProps extends Omit<HTMLMotionProps<"button">, "ref"> {
     | "success"
     | "error"
     | "warning"
-    | "info";
+    | "info"
+    | "liquid";
   size?: "sm" | "md" | "lg";
   icon?: string;
+  children: React.ReactNode;
 }
