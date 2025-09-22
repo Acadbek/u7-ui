@@ -7,6 +7,7 @@ import TabsDesign from '../pages/design/tabs-page'
 import DropDownDesign from '../pages/design/dropdown-page'
 import DialogDesign from '../pages/design/dialog/dialog-page'
 import Home from '../pages/home'
+import CarouselDesign from '../pages/design/carousel/carousel-page'
 
 const Routers = () => {
   return (
@@ -20,6 +21,7 @@ const Routers = () => {
           <Route path={`${docsLink}/${componentLink}/dialog`} element={<DialogDesign />} />
           <Route path={`${docsLink}/${componentLink}/tabs`} element={<TabsDesign />} />
           <Route path={`${docsLink}/${componentLink}/dropdown`} element={<DropDownDesign />} />
+          <Route path={`${docsLink}/${componentLink}/carousel`} element={<CarouselDesign />} />
           <Route path='*' element={<h1>404</h1>} />
         </Routes>
       </div>

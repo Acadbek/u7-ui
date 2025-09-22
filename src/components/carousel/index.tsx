@@ -53,6 +53,7 @@ const Carousel = ({
     emblaApi.on('pointerDown', () => {
       clearInterval(autoplayInterval);
     });
+
     emblaApi.on('destroy', () => {
       clearInterval(autoplayInterval);
     });
@@ -107,7 +108,6 @@ const Carousel = ({
               <path d="M15 18l-6-6 6-6" />
             </svg>
           </motion.button>
-
           <motion.button
             className="absolute top-1/2 right-20px transform -translate-y-1/2 w-40px h-40px rounded-full bg-white/50 backdrop-blur-sm z-10 flex items-center justify-center"
             onClick={scrollNext}

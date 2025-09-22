@@ -13,28 +13,32 @@ export const Tabs: React.FC<TabsProps> = ({ items, defaultIndex = 0 }) => {
 
   return (
     <div className="w-full max-w-xl mx-auto rounded-lg">
-      <div className="flex border-b border-gray-200 dark:border-gray-700">
+      <div className="flex border-b border-gray-200 dark:border-gray-700 relative">
         {items?.map((item, index) => (
           <button
             key={item.label}
             onClick={() => setActiveIndex(index)}
-            className={`relative px-4 py-3 text-md font-medium transition-colors
+            className={`relative px-4 py-3 text-md font-medium transition-colors flex-1
               ${activeIndex === index
                 ? 'text-blue-600 dark:text-blue-400'
                 : 'text-gray-500 hover:text-gray-900 dark:hover:text-gray-100'
               }  
             `}
           >
-            {activeIndex === index && (
-              <motion.div
-                layoutId="underline"
-                className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-600 dark:bg-blue-400"
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              />
-            )}
             {item.label}
           </button>
         ))}
+
+        <motion.div
+          className="absolute bottom-0 h-0.5 bg-blue-600 dark:bg-blue-400"
+          style={{
+            width: `${100 / items.length}%`,
+          }}
+          animate={{
+            x: `${activeIndex * 100}%`,
+          }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        />
       </div>
 
       <div className="pt-4 bg-white dark:bg-gray-800 rounded-b-lg">

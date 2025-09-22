@@ -35,4 +35,9 @@ export const routes: RoutesProps[] = [
     title: "Dropdown",
     link: `${docsLink}/${componentLink}/dropdown`,
   },
+  {
+    id: uuidv4(),
+    title: "Carousel",
+    link: `${docsLink}/${componentLink}/carousel`,
+  },
 ];
