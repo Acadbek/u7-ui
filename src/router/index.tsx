@@ -6,6 +6,7 @@ import ToastDesign from '../pages/design/toast/toast-page'
 import TabsDesign from '../pages/design/tabs-page'
 import DropDownDesign from '../pages/design/dropdown-page'
 import DialogDesign from '../pages/design/dialog/dialog-page'
+import Home from '../pages/home'
 
 const Routers = () => {
   return (
@@ -13,6 +14,7 @@ const Routers = () => {
       <Sidebar className='col-span-2' />
       <div className='col-span-3'>
         <Routes>
+          <Route path={`/`} element={<Home />} />
           <Route path={`${docsLink}/${componentLink}/button`} element={<ButtonDesign />} />
           <Route path={`${docsLink}/${componentLink}/toast`} element={<ToastDesign />} />
           <Route path={`${docsLink}/${componentLink}/dialog`} element={<DialogDesign />} />
